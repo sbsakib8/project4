@@ -1,0 +1,189 @@
+@media screen and (max-width:1024px) {
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    /* home+++++++++++++++++++++++++++ */
+    .header-right .text-1{
+        font-size: 1.2rem;
+    }
+    .header-right .text-2{
+        font-size: 2rem;
+    }
+    .header-right .text-3{
+        font-size: 1.5rem;
+    }
+    .header-right .typing{
+        font-weight: 450;
+    }
+    .btn{
+        padding: 0.3rem 1.2rem;
+    }
+     /* navber open  ++++++++++++++++++++++++++++++*/
+     nav button{
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--normal);
+        cursor: pointer;
+     }
+     nav button#close-menu-btn{
+        display: none;
+     }
+     .nav-menu{
+       position: fixed;
+       top: 5rem;
+       right: 5%;
+       gap: 0;
+       height: fit-content;
+       width: 18rem;
+       flex-direction: column;
+       display: none; 
+       /* i will diplay with js  */
+    }
+    .nav-menu li{
+        width: 100%;
+        height: 3rem;
+        animation: animateNavItems 0.2s linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav-menu li a:hover{
+        background-color: rgba(8, 8, 8,0.9);
+        color: var(--primary);
+    }
+    .nav-menu li a{
+        background-color: #29e9bcdc;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        color: var(--bg);
+        place-items: center;
+    }
+    .nav-menu li:nth-child(2){
+        animation-delay: 0.2s;
+    }
+    .nav-menu li:nth-child(3){
+        animation-delay: 0.4s;
+    }
+    .nav-menu li:nth-child(4){
+        animation-delay: 0.6s;
+    }
+    .nav-menu li:nth-child(5){
+        animation-delay: 0.8s;
+    }
+    .nav-menu li:nth-child(6){
+        animation-delay: 1s;
+    }
+    .nav-menu li:nth-child(7){
+        animation-delay: 1.2s;
+    }
+    @keyframes animateNavItems {
+        0%{
+            transform: rotateZ(-90deg);
+        }
+        100%{
+            transform: rotateZ(0);
+            opacity: 1;
+        }
+    }
+    /* services ++++++++++++++++++++++++++++++++++++*/
+    .services-container .cards{
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 1rem;
+    }
+    .services-container .cards .card{
+        padding: 2rem 0.3rem;
+        margin: 0 0.5rem;
+    }
+    .services-container .cards .card:hover::after{
+        transform: rotate(5deg);
+    }
+/* portfolio++++++++++++++++++++++ */ 
+     .gallery a{
+    height: 14rem;
+    width: 18rem;
+    }
+    /* courses +++++++++++++++++++++++++ */
+    .courses-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* footer+++++++++++++++++++++++ */
+    .container-footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* mobile media */
+@media screen and (max-width: 600px) {
+    .container{
+        width: var(--container-width-sm);
+    }
+    .nav-menu{
+        right: 3%;
+    }
+    /* home++++++++++++++++++++++++++++++++++++++ */
+    .header-right .text-1{
+        font-size: 1rem;
+    }
+    .header-right .text-2{
+        font-size: 1.2rem;
+    }
+    .header-right .text-3{
+        font-size: 1.2rem;
+    }
+    .btn{
+        padding: 0.3rem 1rem;
+    }
+    .header-right a{
+        margin-bottom: 5rem;
+    }
+    /* about ++++++++++++++++++++++++++++ */
+    .about-container{
+        flex-direction: column;
+    }
+    .about-container .about-img{
+        width:15rem;
+    }
+    /* services++++++++++++++++++++++ */
+    .services-container .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+    .services-container .cards .card{
+        padding: 3rem 1rem;
+        margin: 1rem 1rem;
+    }
+    .services-container .cards .card:hover::after{
+        transform: rotate(5deg);
+    }
+    /* portfolio++++++++++++++++++++++++ */
+    .gallery a{
+        width: 28rem;
+     }
+/*  courses++++++++++++++++++++++++++++++++++*/
+    .courses-container{
+    grid-template-columns: 1fr;
+    width: 80%;
+    }
+    .container-footer{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer-social{
+     justify-content: center;
+    }
+}

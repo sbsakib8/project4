@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,400&display=swap');
+
+:root{
+    --primary:#29e9bc;
+    --normal:#ffffff;
+    --black:#13131a;
+    --bg:#0c1013;
+    --danger:#f75842;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    outline-offset: none;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .5s linear;
+    scroll-behavior: smooth;
+}
+/*============== custom scroll bar============ */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--danger);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--primary);
+}
+/*============== custom scroll bar end============ */
+body{
+    line-height: 1.7;
+    color: var(--normal);
+    background: var(--bg);
+}
+/* ===============container  lg ================ */
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+/* ===========container  lg  -===========*/
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,h2,h3,h4{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--normal);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+/* =========== custom button ====== */
+.btn{
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--black);
+    padding: 0.5rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.3rem;
+    font-weight: 500;
+}
+.btn:hover{
+    color: var(--primary);
+    background: transparent;
+    border-color: var(--primary);
+}
+/* =========== custom button end ====== =*/
+.border-bottom{
+    text-align: center;
+    display: inline-block;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 2.5rem;
+    color: var(--primary);
+}
+nav{
+    background-color: var(--black);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.nav-container{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container span{
+    color: var(--primary);
+    font-size: 2rem;
+}
+.nav-container h4{
+    font-size: 1.5rem;
+}
+.nav-container h4:hover{
+    color: var(--primary);
+    transform: translate(10px);
+}
+nav button{
+    display: none;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+   align-items: center;
+   gap: 3rem;
+   
+}
+.nav-menu a{
+    font-size: 1rem;
+}
+.nav-menu a:hover{
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 2rem;
+}
+.window-scroll{
+    background-color: #0c1013f1;
+}
+/*=============== header section start============ */
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* height: 600px; */
+}
+.header-left{
+    flex: 1;
+}
+.header-right{
+    flex: 1;
+}
+.header-right .text-1{
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+.header-right .text-2{
+    font-size: 3.6rem;
+    font-weight: 550;
+}
+.header-right .text-3{
+    font-size: 2.5rem;
+    margin: 0.3rem 0;
+}
+header::before{
+    content: "";
+    position: absolute;
+    background: var(--black);
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+    z-index: 99;
+    transform: skewY(2deg);
+    transform-origin: left;
+}
+.header-right .typing{
+    color: var(--primary);
+    font-weight: 500;
+}
+/*=============== header section end============ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== about section start============ */
+.about{
+    text-align: center;
+    background-color: var(--black);
+}
+.about-container{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+.about-container.about-img img{
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.about-container .about-img{
+    width:100rem;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    overflow: hidden;
+     /* max-width: 12.5rem;
+    max-height: 12.5rem;  */
+    margin-right: 2rem;
+    position: relative;
+    align-items: center;
+}
+.about-container .about-text{
+    max-width: 70%;
+    text-align: justify;
+}
+.about-container .about-text .text{
+    margin-bottom: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+.about-container .about-text .text span{
+    color: var(--primary);
+    font-weight: 500;
+}
+/*=============== about section end============ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== services section start============ */
+.services{
+    text-align: center;
+    margin-top: -5rem;
+}
+.services-container .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.services-container .cards .card{
+    background-color:var(--primary);
+    padding: 1.5rem 1rem;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    position: relative;
+}
+.sbox i{
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    color: var(--bg);
+    border: 1px solid rgba(0, 0, 0,0.5);
+    border-radius: 50%;
+    padding: 0.90rem;
+    transition: all 1s;
+}
+.sbox h3{
+    font-size: 1.2rem;
+    color: var(--black);
+}
+.sbox p{
+    margin: 1.2rem;
+    color: var(--bg);
+}
+.sbox a{
+    color: var(--normal);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+    background-color: var(--bg);
+    border-radius: 1rem;
+}
+.sbox a:hover{
+    background-color: var(--normal);
+    color: var(--bg);
+    border: 1px solid var(--bg);
+}
+.services-container .cards .card:hover .sbox i{
+    background-color: var(--bg);
+    color: var(--normal);
+}
+.services-container .cards .card::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--normal);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.services-container .cards .card:hover::after{
+    transform: rotate(13deg);
+    transition: all 1s;
+}
+/*=============== serviscs section end============ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== skill section start============ */
+.skill .new{
+    text-align: center;
+}
+.skill-container{
+    display: flex;
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    padding: 1.6rem 1.8rem;
+    max-width: 40rem;
+    background-color: var(--black);
+    border-radius: 0.7rem;
+    box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+.skill-container .bar{
+    margin: 1.2rem 0;
+}
+.skill-container .bar:first-child{
+    margin-top: 0rem;
+}
+.skill-container .bar .info{
+    margin-bottom: 0.3rem;
+}
+.skill-container .bar .info span{
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0;
+    animation: showText 0.5s  forwards;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.skill-container .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background-color: var(--normal);
+    border-radius: 0.7rem;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 0.7rem;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 3s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+    width: 90%;
+}
+.bar .progress-line.css span{
+    width: 85%;
+}
+.bar .progress-line.js span{
+    width: 75%;
+}
+.bar .progress-line.bootstrap span{
+    width: 75%;
+}
+.bar .progress-line.react span{
+    width: 75%;
+}
+.progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -0.7rem;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 0.5rem solid transparent;
+    border-bottom-width: 0rem;
+    border-right-width: 0rem;
+    border-top-color: var(--bg);
+    opacity: 0;
+    animation: showText2 0.5s 1s linear forwards;
+}
+.progress-line span::after{
+    position: absolute;
+    top: -1.8rem;
+    right: 0rem;
+    font-weight: 500;
+    background-color: var(--bg);
+    color: var(--normal);
+    padding: 1px 0.5rem;
+    font-size: 1rem;
+    opacity: 0;
+    animation: showText2 0.5s 1s linear forwards;
+}
+@keyframes showText2{
+    100%{
+        opacity: 1;
+    }
+}
+.progress-line.html span::after{
+    content: "90%";
+}
+.progress-line.css span::after{
+    content: "85%";
+}
+.progress-line.js span::after{
+    content: "75%";
+}
+.progress-line.bootstrap span::after{
+    content: "80%";
+}
+.progress-line.react span::after{
+    content: "75%";
+}
+/*=============== skill section end============ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== portfolio section start============ */
+.container-portfolio{
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: var(--black);
+    border-radius: 2rem;
+}
+.gallery a{
+    height: 15rem;
+    width: 20rem;
+    margin: 1.2rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    box-shadow: 0 3px 5px var(--primary);
+}
+.gallery a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery a:hover{
+    box-shadow: 3px 3px 3px var(--primary);
+    border: 2px solid var(--primary);
+}
+.gallery a img:hover{
+    transform: scale(0.9);
+}
+/*=============== portfolio section end============ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== courses section start============ */
+.courses{
+    text-align: center;
+}
+.courses-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.course{
+    background-color: var(--black);
+    text-align: center;
+    border: 1px solid transparent;
+}
+.course:hover{
+    border-color: var(--primary);
+    background: transparent;
+}
+.course-info{
+    padding: 2rem;
+}
+.course-info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+/*=============== courses section end============ */
+/* _+++++++++++++++++++++++++++++++++++++++++++++ */
+/*=============== footer section start============ */
+footer{
+    padding-top: 5rem;
+    background-color: var(--black);
+    font-size: 0.9rem;
+}
+.container-footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+.container-footer div h4{
+    margin-bottom: 1.2rem;
+}
+.footer-two p{
+    margin: 0 0 2rem;
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+    list-style: none;
+}
+footer ul li a:hover{
+    color: var(--primary);
+    text-decoration: underline;
+}
+.footer-four .mail{
+    text-transform: lowercase;
+}
+.footer-social{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.footer-social li:hover{
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+}
+.footer-copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--normal);
+}
+/*=============== footer section end============ */
