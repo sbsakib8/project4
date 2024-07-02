@@ -19,7 +19,7 @@
         font-size: 1.2rem;
     }
     .header-right .text-2{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .header-right .text-3{
         font-size: 1.5rem;
@@ -29,7 +29,16 @@
     }
     .btn{
         padding: 0.3rem 1.2rem;
+        border-radius: 20px;
     }
+    /* =========home section ============= */
+    .header-container{
+        height: 100vh;
+       }
+       .header-left-img img{
+        height: 500px;
+       }
+    
      /* navber open  ++++++++++++++++++++++++++++++*/
      nav button{
         display: inline-block;
@@ -187,3 +196,53 @@
      justify-content: center;
     }
 }
+@media screen and (max-width:430px) {
+    .header-left-img img{
+        margin-top: 300px;
+    }
+    .header-right{
+        margin-left: 20px;
+        margin-top: -450px;
+        margin-left: -240px;
+    }
+    .header-right .text-1{
+        font-size: 2rem;
+    }
+    .header-right .text-2{
+        font-size: 2.5rem;
+    }
+    .header-right .text-3{
+        font-size: 2rem;
+    }
+    .header-right .typing{
+        font-weight: 450;
+    }
+    .btn{
+        padding: 1rem 2rem;
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width:360px) {
+    .header-left-img img{
+        margin-top: 300px;
+    }
+    
+    .header-right .text-1{
+        font-size: 0rem;
+    }
+    .header-right .text-2{
+        font-size: 2rem;
+    }
+    .header-right .text-3{
+        font-size: 2rem;
+    }
+    .header-right .typing{
+        font-weight: 450;
+    }
+    .btn{
+        padding: 1rem 2rem;
+        border-radius: 20px;
+    }
+
+}
+
